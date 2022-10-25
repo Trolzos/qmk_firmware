@@ -22,107 +22,128 @@
 
 /*
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
- * │ º │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ 0 │ ' │ ¡ │       │
+ * │esc│ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ 0 │ - │mas│BORRAR │
  * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
- * │     │ Q │ W │ E │ R │ T │ Y │ U │ I │ O │ P │ ` │ + │     │
- * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
- * │      │ A │ S │ D │ F │ G │ H │ J │ K │ L │ Ñ │ ´ │ Ç │    │
- * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
- * │    │ < │ Z │ X │ C │ V │ B │ N │ M │ , │ . │ - │          │
+ * │ TAB │ Q │ W │ E │ R │ T │ Y │ U │ I │ O │ P │CA │CC │MENU │
+ * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────│
+ * │CAPS  │ A │ S │ D │ F │ G │ H │ J │ K │ L │PTS│ ´ │ ENTER  │
+ * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────────┤
+ * │SHFT│ < │ Z │ X │ C │ V │ B │ N │ M │ , │ . │ - │          │
  * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
  * │    │    │    │                        │    │    │    │    │
  * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
  */
 // Row 1
-#define ES_MORD KC_GRV  // º
-#define ES_1    KC_1    // 1
-#define ES_2    KC_2    // 2
-#define ES_3    KC_3    // 3
-#define ES_4    KC_4    // 4
-#define ES_5    KC_5    // 5
-#define ES_6    KC_6    // 6
-#define ES_7    KC_7    // 7
-#define ES_8    KC_8    // 8
-#define ES_9    KC_9    // 9
-#define ES_0    KC_0    // 0
-#define ES_QUOT KC_MINS // '
-#define ES_IEXL KC_EQL  // ¡
+#define KC_ESC KC_GRV  // esc
+#define KC_1    KC_1    // 1
+#define KC_2    KC_2    // 2
+#define KC_3    KC_3    // 3
+#define KC_4    KC_4    // 4
+#define KC_5    KC_5    // 5
+#define KC_6    KC_6    // 6
+#define KC_7    KC_7    // 7
+#define KC_8    KC_8    // 8
+#define KC_9    KC_9    // 9
+#define KC_0    KC_0    // 0
+#define KC_MINS KC_MINS // -
+#define KC_EQL KC_EQL  // MAS
+#define KC_BSPC KC_BSPC  // BORRAR
 // Row 2
-#define ES_Q    KC_Q    // Q
-#define ES_W    KC_W    // W
-#define ES_E    KC_E    // E
-#define ES_R    KC_R    // R
-#define ES_T    KC_T    // T
-#define ES_Y    KC_Y    // Y
-#define ES_U    KC_U    // U
-#define ES_I    KC_I    // I
-#define ES_O    KC_O    // O
-#define ES_P    KC_P    // P
-#define ES_GRV  KC_LBRC // ` (dead)
-#define ES_PLUS KC_RBRC // +
+#define KC_TAB    KC_TAB    // TAB
+#define KC_Q    KC_Q    // Q
+#define KC_W    KC_W    // W
+#define KC_E    KC_E    // E
+#define KC_R    KC_R    // R
+#define KC_T    KC_T    // T
+#define KC_Y    KC_Y    // Y
+#define KC_U    KC_U    // U
+#define KC_I    KC_I    // I
+#define KC_O    KC_O    // O
+#define KC_P    KC_P    // P
+#define KC_LBRC  KC_LBRC // CORCHETESABRIENDO
+#define KC_RBRC KC_RBRC // CORCHETESCERRANDO
+#define KC_MENU    KC_MENU    // MENU
 // Row 3
-#define ES_A    KC_A    // A
-#define ES_S    KC_S    // S
-#define ES_D    KC_D    // D
-#define ES_F    KC_F    // F
-#define ES_G    KC_G    // G
-#define ES_H    KC_H    // H
-#define ES_J    KC_J    // J
-#define ES_K    KC_K    // K
-#define ES_L    KC_L    // L
-#define ES_NTIL KC_SCLN // Ñ
-#define ES_ACUT KC_QUOT // ´ (dead)
-#define ES_CCED KC_NUHS // Ç
+#define KC_LCAP    KC_LCAP    // LCAP
+#define KC_A    KC_A    // A
+#define KC_S    KC_S    // S
+#define KC_D    KC_D    // D
+#define KC_F    KC_F    // F
+#define KC_G    KC_G    // G
+#define KC_H    KC_H    // H
+#define KC_J    KC_J    // J
+#define KC_K    KC_K    // K
+#define KC_L    KC_L    // L
+#define KC_SLSH KC_SLSH // SLASH
+#define KC_QUOT KC_QUOT // ´ (dead)
 // Row 4
-#define ES_LABK KC_NUBS // <
-#define ES_Z    KC_Z    // Z
-#define ES_X    KC_X    // X
-#define ES_C    KC_C    // C
-#define ES_V    KC_V    // V
-#define ES_B    KC_B    // B
-#define ES_N    KC_N    // N
-#define ES_M    KC_M    // M
-#define ES_COMM KC_COMM // ,
-#define ES_DOT  KC_DOT  // .
-#define ES_MINS KC_SLSH // -
+#define KC_LEFT_SHIFT KC_LEFT_SHIFT // SHIFT
+#define KC_Z    KC_Z    // Z
+#define KC_X    KC_X    // X
+#define KC_C    KC_C    // C
+#define KC_V    KC_V    // V
+#define KC_B    KC_B    // B
+#define KC_N    KC_N    // N
+#define KC_M    KC_M    // M
+#define KC_COMMA KC_COMMA // ,
+#define KC_DOT  KC_DOT  // .
+#define KC_NUBS KC_NUBS // -
+#define KC_UP KC_UP // ARRIBA
+#define KC_DEL KC_DEL  // SUPRIMIR
+
+
+// Row 5
+#define KC_LEFT_CTRL KC_LEFT_CTRL // CTLR DER
+#define KC_LEFT_GUI KC_LEFT_GUI // WINDOWS
+#define KC_LEFT_ALT KC_LEFT_ALT // WINDOWS
+#define KC_SPACE KC_SPACE // ESPACIO
+#define KC_ALGR KC_ALGR // ALTGR
+#define KC_SCLN KC_SCLN // DOSPTOS
+#define KC_LEFT KC_LEFT // IZQ
+#define KC_DOWN KC_DOWN // ABAJO
+#define KC_RIGHT KC_RIGHT // DER
+
+
+
+
 
 /* Shifted symbols
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
- * │ ª │ ! │ " │ · │ $ │ % │ & │ / │ ( │ ) │ = │ ? │ ¿ │       │
+ * │   │ ! │ @ │ # │ $ │ % │ ^ │ & │ * │ ( │ ) │ - │ = │       │
  * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
  * │     │   │   │   │   │   │   │   │   │   │   │ ^ │ * │     │
  * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
- * │      │   │   │   │   │   │   │   │   │   │   │ ¨ │   │    │
+ * │      │   │   │   │   │   │   │   │   │   │   │ ? │   │    │
  * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
- * │    │ > │   │   │   │   │   │   │   │ ; │ : │ _ │          │
+ * │    │ > │   │   │   │   │   │ Ñ │   │ ; │ : │ | │          │
  * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
  * │    │    │    │                        │    │    │    │    │
  * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
  */
 // Row 1
-#define ES_FORD S(ES_MORD) // ª
-#define ES_EXLM S(ES_1)    // !
-#define ES_DQUO S(ES_2)    // "
-#define ES_BULT S(ES_3)    // ·
-#define ES_DLR  S(ES_4)    // $
-#define ES_PERC S(ES_5)    // %
-#define ES_AMPR S(ES_6)    // &
-#define ES_SLSH S(ES_7)    // /
-#define ES_LPRN S(ES_8)    // (
-#define ES_RPRN S(ES_9)    // )
-#define ES_EQL  S(ES_0)    // =
-#define ES_QUES S(ES_QUOT) // ?
-#define ES_IQUE S(ES_IEXL) // ¿
+#define KC_EXLM S(KC_1)    // !
+#define KC_AT S(KC_2)      // @
+#define KC_HASH S(KC_3)    // #
+#define KC_DLR  S(KC_4)    // $
+#define KC_PERC S(KC_5)    // %
+#define KC_CIRC S(KC_6)    // ^
+#define KC_AMPR S(KC_7)    // &
+#define ES_ASTR S(KC_8)    // *
+#define KC_LPRN S(KC_9)    // (
+#define KC_RRPN S(KC_0)    // )
+#define KC_UNDS S(KC_MINS) // _
+#define KC_KP_EQUAL S(ES_IEXL) // =
 // Row 2
-#define ES_CIRC S(ES_GRV)  // ^ (dead)
-#define ES_ASTR S(ES_PLUS) // *
+#define KC_LCBR  s(KC_LBRC) // CORCHETESABRIENDO
+#define KC_RCBR (KC_RBRC) // CORCHETESCERRANDO
 // Row 3
-#define ES_DIAE S(ES_ACUT) // ¨ (dead)
+#define KC_QUES S(KC_SLSH) // ? 
+#define KC_DQUO S(KC_QUOT) // ´ (dead)
 // Row 4
-#define ES_RABK S(ES_LABK) // >
-#define ES_SCLN S(KC_COMM) // ;
-#define ES_COLN S(KC_DOT)  // :
-#define ES_UNDS S(ES_MINS) // _
+#define KC_LABK S(KC_COMMA) // ,
+#define KC_RABK S(KC_DOT)  // .
+#define KC_PIPE S(KC_NUBS) // |
+#define ES_NTIL S(KC_N) // Ñ
 
 /* AltGr symbols
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
@@ -138,16 +159,32 @@
  * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
  */
 // Row 1
-#define ES_BSLS ALGR(ES_MORD) // (backslash)
-#define ES_PIPE ALGR(ES_1)    // |
-#define ES_AT   ALGR(ES_2)    // @
-#define ES_HASH ALGR(ES_3)    // #
-#define ES_TILD ALGR(ES_4)    // ~
-#define ES_EURO ALGR(ES_5)    // €
-#define ES_NOT  ALGR(ES_6)    // ¬
+#define KC_F1 ALGR(KC_1)    // F1
+#define KC_F2 ALGR(KC_2)    // F2
+#define KC_F3 ALGR(KC_3)    // F3
+#define KC_F4 ALGR(KC_4)    // F4
+#define KC_F5 ALGR(KC_5)    // F5
+#define KC_F6 ALGR(KC_6)    // F6
+#define KC_F7 ALGR(KC_7)    // F7
+#define KC_F8 ALGR(KC_8)    // F8
+#define KC_F9 ALGR(KC_9)    // F9
+#define KC_F10 ALGR(KC_0)    // F10
+#define KC_F11 ALGR(KC_MINS)    // F11
+#define KC_F12 ALGR(KC_EQL)    // F12
 // Row 2
-#define ES_LBRC ALGR(ES_GRV)  // [
-#define ES_RBRC ALGR(ES_PLUS) // ]
+#define KC_PSCR ALGR(KC_P)  // PRINTSCREEN
+#define KC_TILD  ALGR(KC_LBRC) // CORCHETESABRIENDO
 // Row 3
-#define ES_LCBR ALGR(ES_ACUT) // {
-#define ES_RCBR ALGR(ES_CCED) // }
+#define RGB_TOG ALGR(KC_A) // RGB TOGGLE
+#define RGB_MODE_FORWARD ALGR(KC_S) // RGB MODE ADELANTE
+#define RGB_MODE_REVERSE ALGR(KC_D) // RGB MODE ATRAS
+#define RGB_HUI ALGR(KC_F) // HUI
+#define RGB_SAI ALGR(KC_G) // SAI
+#define RGB_SAD ALGR(KC_H) // SAD
+#define RGB_VAI ALGR(KC_J) // VAI
+#define RGB_VAD ALGR(KC_K) // VAD
+#define RGB_SPI ALGR(KC_L) // SPI
+#define RGB_SPD ALGR(KC_SLSH) // SPD
+//ROW 4
+#define QK_BOOTLOADER ALGR(KC_DEL) // SPD
+
